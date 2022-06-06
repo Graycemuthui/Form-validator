@@ -6,18 +6,18 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 // Show input error message and outline
-function showError(input, message) {
+const showError = (input, message) => {
   const formControl = input.parentElement;
   formControl.className = "form-control error";
   const small = formControl.querySelector("small");
   small.innerText = message;
-}
+};
 
 // Show success outline
-function showSuccess(input) {
+const showSuccess = (input) => {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
-}
+};
 
 // Check email is valid and lowercase
 function checkEmail(input) {
@@ -31,7 +31,7 @@ function checkEmail(input) {
 }
 
 // Check required fields
-function checkRequired(inputArr) {
+const checkRequired = (inputArr) => {
   inputArr.forEach(function (input) {
     if (input.value.trim() === "") {
       showError(input, `${getFieldName(input)} is required`);
@@ -39,10 +39,10 @@ function checkRequired(inputArr) {
       showSuccess(input);
     }
   });
-}
+};
 
 // Check input length
-function checkLength(input, min, max) {
+const checkLength = (input, min, max) => {
   if (input.value.length < min) {
     showError(
       input,
@@ -56,19 +56,19 @@ function checkLength(input, min, max) {
   } else {
     showSuccess(input);
   }
-}
+};
 
 // Check passwords match
-function checkPasswordsmatch(input1, input2) {
+const checkPasswordsmatch = (input1, input2) => {
   if (input1.value !== input2.value) {
-    showError(input2, "Password do not match");
+    showError(input2, "Passwords do not match");
   }
-}
+};
 
 // Get fieldname and change the first letter to uppercase
-function getFieldName(input) {
+const getFieldName = (input) => {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
+};
 
 // Add event listener to form
 form.addEventListener("submit", (e) => {

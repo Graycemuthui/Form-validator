@@ -1,3 +1,7 @@
+### Screenshot
+- Here is a screenshot of my project
+![Screenshot from 2022-06-07 01-06-39](https://user-images.githubusercontent.com/95374858/172308082-56158925-2b82-4a2c-a614-b47825a5e43d.png)
+
 ### From Validation
 
 - This is a Microverse project that entails functionality of a form.
@@ -19,7 +23,7 @@
 
 ### Deployment
 
-- Here is the live link to view this project [link](https://graycemuthui.github.io/To-Do-List/)
+- Here is the live link to view this project [link]( https://graycemuthui.github.io/Form-validator/)
 
 ### Setup
 
